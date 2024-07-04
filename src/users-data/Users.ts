@@ -1,8 +1,4 @@
-const express = require('express');
-const app = express();
-const port = 3000;
-
-const users = [
+export const users = [
     {
         nome: "João Silva",
         usuario: "jsilva",
@@ -304,16 +300,3 @@ const users = [
         }
     }
 ];
-
-app.get('/', (req, res) => {
-    res.json({message: 'API executando'});
-});
-
-app.get('/users', (req, res) => {
-    res.json(users);
-});
-
-
-app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}`);
-});
